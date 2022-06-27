@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* 외부 css파일은 상단에 반드시 인코딩 형식 utf-8지정 필수!!! */
+
+
+/* 공통 클래스 */
+/* box center의 의미로 bxc */
+.bxc {
+
+    /* < 기본 박스모델 속성> */
+
+    /* 1. 가로크기 */
+    width: 750px;
+    /* w750 */
+    /* 2. 세로크기 */
+    /* height: 200px; */
+    /* h20 */
+    /* height: 200%; */
+    /* h20p */
+    /* 3. 안쪽 여백 */
+    padding: 10px;
+    /* p10 */
+    /* 4. 경계선 */
+    /* 순서 : 두께 - 종류 - 색상(두종색) */
+    border: 2px solid hsl(240, 100%, 50%);
+    /* 색상 쓰는 방법은 3~4가지가 있다 */
+    /* 5. 바깥여백 */
+    margin: 20px auto;
+    /* m20 */
+    /* 
+                                [블록박스 중앙정렬]
+                                margin: 0 auto; -> 마영오!
+                                양쪽마진 auto의 의미는? 양쪽마진 똑같이 등분할!
+
+                        
+                            [마진 값 주기]   * 패딩값도 동일한 방법!
+                             margin: 하나; -> 4방향마진
+                             margin: 하나 둘 -> 위아래 양쪽
+                             margin: 하나 둘 셋  -> 위 양쪽 아래
+                             margin: 하나 둘 셋 넷   -> 위부터 시작해서 시계방향
+                        */
+
+    /* 박스크기유지 속성! " pedding 과 border 의 크기를 포함" */
+    box-sizing: border-box;
+    /* bxb 박스 사이징 보더박스  박스 안쪽으로 패딩하고 보더가 들어간다 */
+}
+
+/* 상단과 하단만  */
+#top,
+#info {
+
+    /* 배경색 */
+    background-color: #0bc7a7;
+    /* bgc */
+
+    /* 블록박스 인라인 내용 중앙정렬 */
+
+    text-align: center;
+    /* tac */
+
+    /* text-align 텍스트 정렬
+                        left
+                        right
+                        center
+                        justify  양쪽정렬
+                        
+                        */
+
+}
+
+/* 1. 상단영역 -  */
+h1 {
+
+
+
+
+    /* 타이틀 */
+    h1font-size: 30px;
+    /* 글자크기 */
+    font-weight: 900;
+    /* 글자크기 */
+    /* lighter -> 얇게 */
+    font-family: serif, "궁서", "굴ㅇ림", "돋움";
+    /* 글자두께 */
+    /* 앞에체가 없으면 다음 순위로 */
+    font-family: 'Dokdo', cursive;
+    /* 글자체 */
+    /* 웹폰트가 왜 대세인가? 글씨체로 코딩을 해버리면 사용자에게 글씨체가 없어도 ok */
+    color: rgb(189, 65, 59);
+    /* 글자색 */
+    letter-spacing: 10px;
+    /* 글자자간 */
+    /* 기본자간은 0이다 */
+    line-height: 1;
+    /* 글자줄간격 */
+    /* lh */
+    /* 픽셀로 주는 거랑 배수로 주는 법 두가지가 있다 */
+    word-spacing: 10px;
+    /* 글자단어간격 */
+    /* 띄어쓰기가 없으면 단어가 없는 거랑 마찬가지이다 */
+    /* 글자스타일 */
+    /* 다중커서 + ctrl + / (주석) */
+
+
+}
+
+/* 메뉴 GNB  */
+.nav>a {
+    /* a 링크는 2가지 기본설정이 있음. 글자색, 글자밑줄 -> 여기서 수정해야한다.  */
+    color: rgb(25, 19, 201);
+    text-decoration: none;
+    /* 밑줄 없애기! */
+    font: italic bold 20px/40px "굴림"
+        /* font: 스두크/줄체; */
+
+
+        /* font: 스타일 두께 크기/줄간격 글씨체;      */
+
+}
+
+/* <마우스오버시 :hover 가상클래스> */
+.nav>a+a:hover {
+    /* 앞에 a를 가진 a 요소를 모두 선택 -> 결과적으로 첫번째 a만 제외됨 */
+    color: rgb(112, 200, 44);
+    text-decoration: overline;
+    /* text-decoration: line-through */
+
+}
+
+/* <메뉴 중 로고이미지> */
+.nav a img {
+    vertical-align: -3px;
+    /* 이미지를 텍스트하고 동일 라인에 두기 */
+    /* 인라인 요소간 세로정렬 : top, bottom, baseline, middle, 수치값 
+                                인라인 요소 진행방향인 오른쪽에 영향을 준다(보통 이미지와 글자의 세로 위치를 조정할 때 사용한다.*/
+
+
+}
+
+.nav a:hover img {
+    color: #0c0c0c;
+
+}
+
+
+/* 2. 메인영역 */
+#cont img {
+    width: 100%;
+    /* 이미지는 가로크기를 주면 세로크기는 비율유지함 */
+}
+
+/* 3. 하단영역 */
+
+#info address {
+    /* address기본 이탤릭해제! */
+    font: normal bold 17px/25px "굴림";
+    color: #333;
+    padding: 20px 0;
+
+
+}

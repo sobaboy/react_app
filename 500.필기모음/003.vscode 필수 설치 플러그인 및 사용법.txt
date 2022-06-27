@@ -12,7 +12,7 @@
  2) image preview
    : 이미지 미리보기 기능 지원
  3) Live Server
-   : 브라우저 실시간 미리보기
+     : 브라우저 실시간 미리보기
  4) Beautify : 자동줄맞춤
   -> 단축키 지정하기
   -> 자동줄맞춤 추가 플러그인 : prettier
