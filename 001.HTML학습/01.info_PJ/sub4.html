@@ -1,43 +1,93 @@
 <!doctype html>
-    <html>
+<html>
 
-        <head>
-            <title>네이버 요약뉴스 - 정치</title>
-            <meta charset="utf-8">
-            <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+<head>
+    <title>네이버 요약뉴스 - 정치</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/comman.css">
+    <link rel="stylesheet" href="./css/sub.css">
+</head>
+<body>
+    <header id="top" class="bxc">
+        <h1>네이버 요약뉴스 - 정치</h1>
+        <nav class="nav">
+            <a href="index.html">
+                <img src="./Images/네이버 로고.png" alt="네이버로고" style="width: 20px;">
+            </a>
+            <a href="sub1.html">정치</a> |
+            <a href="sub2.html">경제</a> |
+            <a href="sub3.html">사회</a> |
+            <a href="sub4.html">IT/과학</a> |
+            <a href="sub5.html">TV/연예</a>
+
+        </nav>
+    </header>
+    <main id="cont" class="bxc">
+        <!-- 2-1. press 'logo' -->
+        <div class="prlg">
+            <a href="https://www.seoul.co.kr/" target="_blank"> 
+                <img src="./Images/pr4.png" alt="서울신문사logo">
+            </a>
+        </div>
+        <!-- 2-2. article 'title' -->
+        <div class="atit">[우주를 보다] 태양계 ‘8개 행성’ 모두 담긴 희귀 사진 공개
+            
+        </div>
+        <!-- 2-3. article 'image + explanation'  -->
+        <figure class="afig">
+            <img src="./Images/arti4.jpg" alt="IT/과학 article image">
+            <figcaption>
+                <small>한 이미지에 담겨 있는 태양계 8개 행성. / APOD NASA</small>
+            </figcaption> <!-- 다른 tag 추가불가 -->
+        </figure>
+
+        <!-- 2-4. arrticle 'content' -->
+        <setion class="acont">
+            <p><b>태양계 행성 8개</b>가 모두 담긴 사진이 공개돼 관심을 모으고 있다. ‘<strong>오늘의 천체사진</strong>’(APOD) 25일자에 따르면, 낭만적인 분위기의 새벽 하늘 풍경을 담은 이 사진은 <i>카메라 4대가 동시촬영한</i> 이미지를 합쳐 만들었다.</p>
+
+            <p>이 아름다운 천체 파노라마 사진은 지난 24일 해돋이 직전, <em>태양계의 모든 행성</em>을 담고 있다.</p>
+
+            <p>안개가 자욱한 아침, 가장 안쪽에 있는 행성인 수성은 지평선에 바짝 붙어 있는데 아침놀을 배경으로 <mark>찬연하게 빛나는 금성</mark>의 왼쪽 아래에서 볼 수 있다.
+            <i><small><del>하지만 나는 볼 수 없었다! ㅠㅠ</del></small></i>
+            </p>
+
+            <p>맨눈으로 볼 수 있는 행성들인 화성<sub>Mars</sub>, 목성<sub>Jupiter</sub>, 토성<sub>Saturn</sub>은 이울어가는 초승달의 오른쪽으로 큰 호를 그리며 황도 근처에서 <ins>아름답게</ins> 빛나고 있다.</p>
+
+            <p>이들보다 훨씬 희미한 행성인 천왕성과 해왕성은 발견하는 데 쌍안경이 필요했을 것이다. 비록 두 행성은 하늘의 황도를 따라 있지만 말이다.</p>
+
+            <p>태양계<sup>①</sup> 행성<sup>②</sup> 8개는 이 사진에 100% 출석했다. 앞서 나온 일곱 행성 외의 지구는 바로 사진작가의 발 아래 있기 때문이다. 사진을 촬영한 위치는 이탈리아의 마리나 디 산 니콜라 근처에
+                있는 고대 로마 빌라의 유적지인 것으로 알려졌다.</p>
+        </setion>
+        <!-- 2-5. reporter 'info' -->
+            <hr>    <!-- horiziontal line -->
+            <h3>▣주해:</h3>
+            <small>
+                ① 태양계는 항성인 태양과 그 중력에 이끌려 있는 주변 천체가 이루는 체계를 말한다.
+                <br><br>
+                ② 행성 또는 혹성, 떠돌이별은 우주에서 항성의 둘레를 도는 천체의 한 부류이다.
+            </small>
+            
+            <hr>
+        <div class="rpinfo">
+            이광식 과학 칼럼니스트 joand999@naver.com
+        </div>
+        <h5>
+                <a href="https://n.news.naver.com/mnews/article/081/0003282618?sid=105" target="_blank">기사원문</a>
+        </h5>
         
-            <link rel="stylesheet" href="./css/comman.css">
 
-        </head>
+        
+    </main>
+    <footer id="info" class="bxc">
+        <address>
+            서울시 강남구 역삼동 119 대호B 8F <br>
+            대표: Sobaboi <br>
+            전화: 010-xxxx-xxxx
+        </address>
+    </footer>
+</body>
 
-        <body>
-            <header id="top" class="bxc">
-                <h1>네이버 요약뉴스 - 정치</h1>
-                <nav class="nav">
-                    <a href="index.html">
-                        <img src="./Images/네이버 로고.png" alt="네이버로고" style="width: 20px;">
-                    </a>
-                    <a href="sub1.html">정치</a> |
-                    <a href="sub2.html">경제</a> |
-                    <a href="sub3.html">사회</a> |
-                    <a href="sub4.html">IT/과학</a> |
-                    <a href="sub5.html">TV/연예</a>
-                   
-                </nav>
-            </header>
-            <main>
-                
-                    <main id="cont" class="bxc"></main>
-                
-            </main>
-            <footer id="info" class="bxc">
-                    <address>
-                                서울시 강남구 역삼동 119 대호B 8F <br>
-                                대표: Sobaboi <br>
-                                전화: 010-xxxx-xxxx
-                    </address>
-            </footer>
-        </body>
 
-             
-    </html>
+</html>
