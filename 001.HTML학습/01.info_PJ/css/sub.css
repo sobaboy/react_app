@@ -6,3 +6,25 @@
     height: 30px;
 
 }
+
+.work img{
+    width: 500px;
+
+}
+
+
+#header {
+    display: flex;
+    height: 100vh;
+
+}
+
+
+.ul {
+    list-style-type: none;
+
+}
+
+.ol {
+    list-style-type: lower-greek;
+}
