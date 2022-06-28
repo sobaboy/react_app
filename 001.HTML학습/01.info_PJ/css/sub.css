@@ -1,8 +1,16 @@
 @charset "utf-8";
 /* Info PJ 의 subpage 공통 css - sub.css */
 
+/* @import url (파일주소) */
+@import url(comman.css);
+
+/* 메인영역박스 */
+#cont{
+    padding: 15px;
+}
+
 /* 2-1. press logo  */
-.prlg img{
+.prlogo img{
     height: 30px;
 
 }
@@ -27,4 +35,173 @@
 
 .ol {
     list-style-type: lower-greek;
+}
+
+.atit {
+    font-size: 30;          
+    font-weight: normal;          
+    font-family: "굴림";
+    letter-spacing: -1px;
+    word-spacing: 5px;
+    
+}
+
+.atit span{
+    color: lightgreen;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.483);
+}
+
+/* 기사이미지박스 */
+
+.afig{
+    margin: 15px 0;
+}
+
+.afig img{
+    width: 100%;             /* w100p */  /* 가로크기 부모박스 채우기 */
+}
+
+.afig figcaption{
+    text-align: center;     /* text-align 은 block element 에만 적용가능    */
+    margin-bottom: 50px;            /* 브라우저에서 봤을 때 pedding 은 초록색 margin 은 빨강색으로 표시된다 */
+}
+
+.afig small{
+    font-family: "굴림";
+    columns: #666;
+}
+
+/* 기사내용박스 */
+.acont p{
+    font-family: "굴림", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#cont h3{
+    font-family: 'black And white Picture';
+    font-weight: normal;
+    font-size: 20px;
+    /* padding-left: 20px;         */
+}
+
+/* 공통박스 */
+
+#cont article {
+    border-top: 2px dashed #ccc;
+    margin-top: 40px;
+    padding: 15px;
+}
+
+.acont p {
+    font-family: "굴림", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+/* 블록인용구박스 */
+
+.bquote blockquote{
+    margin: 0;
+    padding: 5px;
+    font-family: "굴림";
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+
+/* 메인 컨텐츠 아래 a 요소 
+주의사항 - 글자색, 밑줄은 반드시 a 요소에서 할 것! */
+
+#cont a{
+    color: #222;
+    text-decoration: none;
+    font-family: "돋움","궁서";
+    font-size: 14px;
+    line-height: 2.5;
+    letter-spacing: -1;
+}
+
+/* a element 마우스 오버시 : hover 가상클래스 */
+/* 글자데코 : 밑줄 */
+#cont a:hover{
+    text-decoration: underline;
+    color: orangered;
+}
+
+/* ul 블릿 타입변경 */
+#cont ul{
+    list-style-type: none;
+}
+
+#cont ol{
+    list-style-type: circle;
+}
+
+
+/* 분야별 뉴스 dt */
+.secnews dt{
+font-family: 'black And white Picture';
+margin-top: 27px;
+padding-left: 33px;
+font-size: 22px;
+}
+
+.secnews dt:first-of-type{
+    color: lightsalmon
+}
+.secnews dt:nth-of-type(2){
+    color: lightsalmon
+}
+.secnews dt:last-of-type{
+    color: lightsalmon
+}
+.secnews dt:last-of-type{
+    color: hotpink
+}
+
+article.work {
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+}
+
+
+.work cite {
+    color: red;
+    font-family: "궁서";
+    font-style: normal;
+    font-weight: bold;
+}
+
+.pnews td:first-child {
+    width: 50px;
+    height: 70px;
+    background-color: #ccc;
+    text-align: center;
+}
+/* 두번째 td */
+.pnews td:nth-child(2) {
+    background: #f0f0f0;
+    padding-right: 116px;
+    padding-left: 20px;
+}
+/* 사진뉴스 테이블설정 */
+.pnews img {
+    width: 151px;
+    height: 103px;
+    vertical-align: middle;
+}
+/* 기본 사이간극: collapse 주면 간극 없앰 (seperate 기본값) */  
+.pnews table {
+    border-collapse: separate;
+    border-spacing: 7px;
+}
+
+#cont h5 a, .rpinfo {
+    padding-left: 18px;
+    font-size: 14px;
+    font-weight: normal;
 }

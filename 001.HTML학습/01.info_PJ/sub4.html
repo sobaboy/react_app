@@ -2,16 +2,18 @@
 <html>
 
 <head>
-    <title>네이버 요약뉴스 - 정치</title>
+    <title>네이버 요약뉴스 - IT/과학</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./Images/네이버 로고.png">
-    <link rel="stylesheet" href="./css/comman.css">
+    <!-- <link rel="stylesheet" href="./css/comman.css"> -->
+    <!-- import 방식 : comman 을 sub 에 import하여 불러와서 request 를 줄여준다! -->
     <link rel="stylesheet" href="./css/sub.css">
 </head>
 <body>
+    <script src=""></script>
     <header id="top" class="bxc">
-        <h1>네이버 요약뉴스 - 정치</h1>
+        <h1>네이버 요약뉴스 - IT/과학</h1>
         <nav class="nav">
             <a href="index.html">
                 <img src="./Images/네이버 로고.png" alt="네이버로고" style="width: 20px;">
@@ -26,13 +28,13 @@
     </header>
     <main id="cont" class="bxc">
         <!-- 2-1. press 'logo' -->
-        <div class="prlg">
+        <div class="prlogo">
             <a href="https://www.seoul.co.kr/" target="_blank"> 
                 <img src="./Images/pr4.png" alt="서울신문사logo">
             </a>
         </div>
         <!-- 2-2. article 'title' -->
-        <div class="atit">[우주를 보다] 태양계 ‘8개 행성’ 모두 담긴 희귀 사진 공개
+        <div class="atit">[우주를 보다] 태양계 <span>‘8개 행성’</span> 모두 담긴 희귀 사진 공개
             
         </div>
         <!-- 2-3. article 'image + explanation'  -->
@@ -70,36 +72,36 @@
             </p>
         </setion>
    
-            <hr>    
+            <!-- <hr> -->    
             <!-- 블록인용구 -->
-            <div class="bquote">
+            <article class="bquote">
                 <h3>태양계의 발견과 탐험</h3>
                 <blockquote cite="https://ko.wikipedia.org/wiki/%ED%83%9C%EC%96%91%EA%B3%84">오랜 시간 동안 인류는 (몇몇 주목할 만한 예외가 있지만) 태양계의 존재를 인식하지 못하였다. 그들은 지구가 우주의 중심에 있고 움직이지 않으며, 하늘에서 움직이는 다른 천체와는 절대적으로 다른 존재라고 믿었다. 인도의 수학자이자 천문학자인 아리아바타와 고대 그리스의 철학자 사모스의 아리스타르코스가 태양 중심의 우주론을 추측하기도 했지만[1], 태양중심설을 최초로 수학적으로 예측한 사람은 니콜라우스 코페르니쿠스다. 17세기에는 그 계승자 요하네스 케플러, 갈릴레오 갈릴레이, 아이작 뉴턴이 물리학에 대한 이해로 지구가 태양 주위를 움직이고, 행성은 지구를 제어하는 힘과 같은 힘으로 제어된다는 생각을 수용하였다. 좀 더 최근에는, 망원경 기술이 발달하고 무인 우주선을 사용할 수 있게 됨으로써, 다른 행성의 산맥이나 크레이터 등과 같은 지질학적 현상과 구름, 모래폭풍, 만년설 같은 기상학적 현상을 조사할 수 있게 되었다.
                 </blockquote>
-            </div>
+            </article>
             <!-- horiziontal line -->
 
             <!-- 주해표시 (description) -->
-            <div class="desc">
+            <article class="desc">
                 <h3>▣주해:</h3>
                 <small>
                     ① 태양계는 항성인 태양과 그 중력에 이끌려 있는 주변 천체가 이루는 체계를 말한다.
                     <br><br>
                     ② 행성 또는 혹성, 떠돌이별은 우주에서 항성의 둘레를 도는 천체의 한 부류이다.
                 </small>
-            </div>
+            </article>
             
-            <hr>
+            <!-- <hr> -->
              <!-- 2-5. reporter 'info' -->
-        <div class="rpinfo">
+        <article class="rpinfo">
             이광식 과학 칼럼니스트 joand999@naver.com
-        </div>
+        </article>
         <h5>
                 <a href="https://n.news.naver.com/mnews/article/081/0003282618?sid=105" target="_blank">기사원문</a>
         </h5>
 
-        <hr>
-            <div class="work">
+        <!-- <hr> -->
+            <article class="work">
                 <h3>오늘의 작품 &amp; 느낌</h3>
                <!--  html 특수문자처리 
                 & 엔퍼슨트 &amp;
@@ -112,13 +114,13 @@
                 <figcation>
                 폴세잔 <cite>&lt;사과&gt;</cite>
                 </figcation>
-            </div>
+            </article>
             
-            <bdo dir="rtl">정하정거꾸로해도정하정!</bdo>
-            <hr>
+           
+            <!-- <hr> -->
             <!-- 분야별 뉴스 -->
+            <h3>분야별 뉴스</h3>
             <div class="secnews">
-                <h3>
                     <dl>
                         
                         <dt>경제</dt>
@@ -156,15 +158,16 @@
                         
                         </dd>
                     </dl>
-                </h3>
+        
             </div>
            
-                <hr>
-            <div class="pnews">
+                <!-- <hr> -->
+            <article class="pnews">
                 <h3>사진뉴스</h3>
                 <table>
                     <tbody>
                         <tr>
+                            <td>1</td>
                             <td>
                                 <a href="https://n.news.naver.com/mnews/article/011/0004069625?sid=104" target="_blank">
                                 한반도본부장, 美 재무차관과 오찬 협의…"<br>北도발 따른 제재 강화 공감"
@@ -174,7 +177,9 @@
                                 <img src="https://imgnews.pstatic.net/image/origin/011/2022/06/27/4069625.jpg?type=nf106_72" alt="pn1">
                                 </a>
                             </td>
-                            
+                        </tr>
+                        <tr> 
+                            <td>2</td>
                             <td>
                                 <a href="https://n.news.naver.com/mnews/article/421/0006181859?sid=104" target="_blank">
                                
@@ -186,26 +191,26 @@
                             
                                 </a>
                             </td>
+                        </tr>  
+                        <tr>
+                            <td>3</td>
                             <td>
                                 <a href="https://n.news.naver.com/mnews/article/025/0003205344?sid=104" target="_blank">
-                                <img src="https://imgnews.pstatic.net/image/origin/421/2022/06/27/6181859.jpg?type=nf106_72" alt="pn3">
+                                
                                 미국 전기차 가격 쭉쭉 <br>오른다…비용상승·수요 확대 영향
                                 </a>
                             </td>
                             <td>
-                                <a href="https://n.news.naver.com/mnews/article/421/0006181859?sid=104" target="_blank">
-                                <img src="https://imgnews.pstatic.net/image/origin/001/2022/06/27/13271706.jpg?type=nf106_72" alt="pn4">
-                                3M, 만원 안되는 군납 귀마개로<br> 난청배상금 수십억 달러 배상 직면
-                                </a>
+                                <img src="https://imgnews.pstatic.net/image/origin/421/2022/06/27/6181859.jpg?type=nf106_72" alt="pn3">
                             </td>
                         </tr>
+                      
                     </tbody>
                 </table>
-            </div>
-    </main>
-            <hr>
+            </article>
+             <!-- <hr> -->
             <!-- IT 돋보기 기사모음 (ul) -->
-            <div> 
+            <article> 
                 <h3>IT 돋보기</h3>
                 <ul class="ul">
                     <li><a href="https://n.news.naver.com/mnews/article/138/0002126801?sid=105" target="_blank">
@@ -217,17 +222,19 @@
                     </a></li>
                     </a></li>
                 </ul>
-            </div>
-            <hr>
+            </article>
+            <!-- <hr> -->
             <!-- 랭킹뉴스 -->
-            <div class="rack">
+            <article class="rack">
                 <h3>랭킹뉴스</h3>
                 <ol class="ol">
                     <li><a href="https://n.news.naver.com/mnews/ranking/article/437/0000303442?ntype=RANKING&sid=001">'잠수교 레깅스女' 소속사도 생겼다…대기업 출신 이 여성 정체</a></li>
                     <li><a href="https://n.news.naver.com/mnews/ranking/article/421/0006180613?ntype=RANKING&sid=001">[속보] 서훈 "사실규명 위해 최선 다해 협조…회피 의도 없다"</a></li>
                     <li><a href="https://n.news.naver.com/mnews/ranking/article/374/0000291909?ntype=RANKING&sid=001">"우리도 상의 벗을까요?""승마는 해야죠"…G7의 푸틴 조롱 [영상]</a></li>
                 </ol>
-            </div>
+            </article>
+    </main>
+           
 
     <footer id="info" class="bxc">
         <address>

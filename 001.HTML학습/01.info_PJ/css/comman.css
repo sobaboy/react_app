@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* 외부 css파일은 상단에 반드시 인코딩 형식 utf-8지정 필수!!! */
 
+/* 구글웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
 
 /* 공통 클래스 */
 /* box center의 의미로 bxc */
@@ -70,31 +72,28 @@
 /* 1. 상단영역 -  */
 h1 {
 
-
-
-
     /* 타이틀 */
     h1font-size: 30px;
     /* 글자크기 */
     font-weight: 900;
     /* 글자크기 */
     /* lighter -> 얇게 */
-    font-family: serif, "궁서", "굴ㅇ림", "돋움";
+    /* font-family: serif, "궁서", "굴ㅇ림", "돋움";
     /* 글자두께 */
     /* 앞에체가 없으면 다음 순위로 */
-    font-family: 'Dokdo', cursive;
+    /* font-family: 'Dokdo', cursive; */ 
     /* 글자체 */
     /* 웹폰트가 왜 대세인가? 글씨체로 코딩을 해버리면 사용자에게 글씨체가 없어도 ok */
     color: rgb(189, 65, 59);
     /* 글자색 */
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
     /* 글자자간 */
     /* 기본자간은 0이다 */
     line-height: 1;
     /* 글자줄간격 */
     /* lh */
     /* 픽셀로 주는 거랑 배수로 주는 법 두가지가 있다 */
-    word-spacing: 10px;
+    /* word-spacing: 10px; */
     /* 글자단어간격 */
     /* 띄어쓰기가 없으면 단어가 없는 거랑 마찬가지이다 */
     /* 글자스타일 */
