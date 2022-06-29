@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* 도깨비 PJ 메인 페이지 CSS - main.css */
+/* 메인 페이지에서만 적용되는 CSS */
+
+/* 외부 CSS 합치기 인솔!*/
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+/* 컨텐츠 파트 최상위부모 */
+body{
+    /* 한번에 배경주기 
+    background: 색이반고윙/크   색 이미지 반복 고정 위치/크기(가로세로);
+    font: 스드크줄체*/
+    background: 
+    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
+    url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+}
