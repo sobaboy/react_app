@@ -17,3 +17,36 @@ body{
     url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
     url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
 }
+
+.cont
+    padding-top: 600px;
+    /* padding-top -> 첫번째 요소 위치밀기의 기본
+        margin 으로 밀면 부모요소를 밀어버림. 부모요소에 overflow:hidden 을 주면 포함되지만 첫번째는 이게 정식 */
+.cbx{
+    width: 90%;
+    margin: 0 auto;  
+}
+/* character-box 90%를 유지하면서 가운데로 */
+ 
+.cbx::after{
+    content: '';
+    display: block;
+   
+    /* clear: both;  */
+    
+}
+/* 끊어주는 장치 */
+.cat{
+    width: 25%; 
+    float: left;  
+    box-sizing: border-box;
+   
+    /* 컨텐트 박스를 패딩과 보더를 포함하여 크기를 정하려면  box-sizing: border-box라고 셋팅하면 된다   
+    min-height: 800px 크기에 padding 500px 포함됨 */
+}
+/* w25p */  
+/* 가로크기 4등분 (25%) */
+/* block elem.  parrent elem. 부모에 가상요소로 clear설정 */
+.cat img{
+    width: 100%;
+}

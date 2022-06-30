@@ -1,3 +1,9 @@
 @charset "utf-8";
 /* 도깨비 PJ 핵심공통모듈 CSS - core.css */
 /* 공통 class / 웹 font  setting */
+
+/* 속박스(ibx) class */
+.ibx{
+    max-width: 1200px;   /* max-width 로 설정하면 가로크기가 1200px 밑으로 작아지면 auto로 자동전환 */
+    margin: 0 auto;
+}

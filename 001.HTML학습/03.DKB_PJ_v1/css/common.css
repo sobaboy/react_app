@@ -1,3 +1,23 @@
 @charset "utf-8";
 /* 도깨비 PJ 공통디자인 CSS - common.css */
 /* 상단영역 하단영역 반복디자인  */
+
+
+body *{
+    outline: 2px dashed fuchsia;   
+}
+/* outline -> 박스요소의 외곽선만 표현하며 자신과 다른 요소에 영향을 주지 않는다(보더와 유사) 외곽선 두께 종류 색상(두종색) */
+
+
+.top{
+    height: 125px;
+}
+/* 1. top end 상단영역  id 가 아니라 class에 주는 이유 겉박스는 속박스 크기만큼 자동으로 늘어나게 하여 편리한 셋팅을 유도한다 */
+.cont{
+    min-height: 800px;
+}
+/* 2. cont end 메인영역 최소높이 800px 유지(내용 넘치면 늘어남) */
+.info{
+    height: 240px;
+}
+/* 3. info end 하단영역 */
