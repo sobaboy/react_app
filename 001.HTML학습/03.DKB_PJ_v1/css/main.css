@@ -9,44 +9,194 @@
 
 
 /* 컨텐츠 파트 최상위부모 */
-body{
+body {
     /* 한번에 배경주기 
     background: 색이반고윙/크   색 이미지 반복 고정 위치/크기(가로세로);
     font: 스드크줄체*/
-    background: 
-    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
-    url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+    background:
+        url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
+        url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
 }
 
-.cont
-    padding-top: 600px;
-    /* padding-top -> 첫번째 요소 위치밀기의 기본
+.cont padding-top: 600px;
+
+/* padding-top -> 첫번째 요소 위치밀기의 기본
         margin 으로 밀면 부모요소를 밀어버림. 부모요소에 overflow:hidden 을 주면 포함되지만 첫번째는 이게 정식 */
-.cbx{
+.cbx {
     width: 90%;
-    margin: 0 auto;  
+    margin: 0 auto;
 }
+
 /* character-box 90%를 유지하면서 가운데로 */
- 
-.cbx::after{
+
+.cbx::after {
     content: '';
     display: block;
-   
+
     /* clear: both;  */
-    
+
 }
+
 /* 끊어주는 장치 */
-.cat{
-    width: 25%; 
-    float: left;  
+
+/* 캐릭터 개별박스 공통 */
+.cat {
+    width: 24%;
+    margin: 0 .5%;
+    /* 0.소수점은 0을 생략을 많이 한다 */
+    /* 가로, 세로 크기나 마진값으로 %를 쓰면 기준은 싸고 있는 부모박스이다 */
+    float: left;
     box-sizing: border-box;
-   
+
     /* 컨텐트 박스를 패딩과 보더를 포함하여 크기를 정하려면  box-sizing: border-box라고 셋팅하면 된다   
     min-height: 800px 크기에 padding 500px 포함됨 */
 }
-/* w25p */  
+
+/* w25p */
 /* 가로크기 4등분 (25%) */
 /* block elem.  parrent elem. 부모에 가상요소로 clear설정 */
-.cat img{
+
+
+/* 캐릭터 이미지 박스 */
+.ci{
+    transition: all .4s ease-out;
+}
+
+/* .cat에 hovertl .ci변경 */
+.cat:hover .ci{
+    margin-top: 53t;
+}
+
+/* 캐릭터 이미지 */
+.ci>img {
     width: 100%;
 }
+
+/* 캐릭터 이름이미지 span   inline 에서 block 으로 변경*/
+.ci span {
+    display: block;
+    text-align: center;
+    /* 블럭요소 내부의 inline 컨텐츠 중앙정렬 */
+    margin-top: -20%;
+    /* 겹치는 방법 position을 쓰지않을시 마진값을 마이너스로 주면 위의 요소와 겹쳐진다. 일반적인 위치이동은 margin  
+                                %를 사용하면 margin-top과 left는 은 parentbox의 각각 height값과 width값 대한 퍼센트이다*/
+}
+
+/* 캐릭터 이름이미지 */
+.ci span img {
+    width: 40%;
+}
+
+/* 캐릭터 이름이미지 첫번째 숨김*/
+.ci span img:nth-child(1) {
+    display: none;
+}
+
+/* 캐릭터 이름이미지 첫번째 .cat 에 오버시 보이기 */
+.cat:hover .ci span img:nth-child(1) {
+    display: inline;
+}
+
+/* 캐릭터 이름이미지 두번째 ... 에 오버시 숨기기 */
+.cat:hover .ci span img:nth-child(2) {
+    display: none;
+}
+
+/* 캐릭터 설명박스 */
+.cd {
+    /* 높이값 설정 0px -> 250px 오버시 변경 */
+    height: 0px;
+    /* 넘치는 내용 자동스크롤! 
+    높이값에 따라 스크롤이 자동변경됨 
+    높이값이 0 이면 모두 숨겨짐! */
+    overflow: auto;
+    /* 배경: 색이반고윙/크 */
+    background: url(../images/eachBG.jpg) no-repeat center/cover;
+    transition: height 0.4s linear;
+}
+
+    /* transition : 속성 시간 이징 지연 */
+
+
+
+/* .cat 개별박스에 오버시 .cd 보이기 */
+.cat:hover .cd{
+    height: 250px;
+    
+}
+
+/******************************************************************** 
+    [Transition animation 효과주기]
+    -> attribute 의 변화 과정을 보여주면서 animation 하는 attribution
+    기본설정
+    transition : 속성 시간 이징 지연 -> 속시이지!
+
+    transition
+    transition-delay
+    transition-duration
+    transition-property
+    transition-timing-function
+
+    1. 속성(transition-property) 
+    변경 animation 대상 속성(안쓰거나 all을 쓰면 모든 속성 애니메이션 적용!)
+    -> 속성을 따로 쓰는 이유는 개별적을 속성별로 animation을 따로 설ㅈ어할 수 있기 때문!
+    ex) 
+    transtion : all .4s; -> 모두 적용!  (all은 생략가능)
+    transtion : margin-top .3s ease-in, height 2s linear 1s; 
+    -> 속시이지 순으로 콤마를 사용하면 다양하게 설정가능!
+    2. 시간(transition-duration) - animation 시간 : 초단위(s)
+    3. 이정 (transition-timing-function) - 가속도
+        1) ease : 앞뒤로 약간씩 느림(기본값)
+        2) ease-in : 처음에 천천히 나중에 빨라짐
+        3) ease-out : 나중에 천천히 처음에 빠름
+        4) ease-in-out : 처음과 끝에 천천히 
+        5) linear : 등속도 -> 배지어곡선으로 매우 다채로운 가속도 만들 수 있다
+
+        참고   https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_speed
+
+    4. 지연(transition-delay) - 지연시간. 즉, 처음에 대기시간 (초단위:s)
+    5. 적용법 : 오버시 또는 클래스로 중간에 값을 변경하는 경우
+            시작과 다시 복귀할 때 애니메이션이 같다면 오버시가 아닌 원본에 transition을 주면 된다
+            다를 경우 따로따로 오버시(또는 클래스)에 transition 을 적용하면 다르게 animation된다
+
+*************************************************************************/
+
+/* 캐릭터 설명 타이틀 */
+.cd h3 {
+    font-family:'Dokdo',
+    ,'ZCOOL QingKe HuangYou', cursive;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px 10px 5px;
+    /* white-space: nowrap;   줄바꿈 방지 */
+    letter-spacing: -1px;
+}
+
+/* 캐릭터 설명문단 */
+.cd p{
+    font-family: "궁서";
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 10px;
+    text-align: justify;  /* 양쪽정렬 */
+}
+
+/* 캐릭터 설명 첫번째 p요소의 첫번째 글자 가상요소로 변경하기! */
+.cd p:first-of-type::first-letter{
+    font-size: 35px;
+    color: cyan;    /* 글자그림자로 테두리 만들기 */
+    text-shadow: 1px 0 #000,-1px 0 #000,
+    0 1px 0 #000,0 -1px 0 #000;       /* 그림자 각방향으로 1px 밀어서 테두리 만들기 */
+}
+/*  */
+.cd h3::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    background: url(../images/bg_logo_a_01.png) no-repeat right -183px;
+    vertical-align: -6px
+    ;
+    /* outline: 1px solid red; */
+} 
+

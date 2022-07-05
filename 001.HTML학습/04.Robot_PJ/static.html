@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position - static</title>
+    <style>
+        .bx {
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            /* 글자가로중앙 */
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            /* 글자세로중앙 */
+            line-height: 100px;
+        }
+
+        #s1{
+            position: static;
+            background-color: lightgreen;
+            margin-top: 100px;
+            margin-left: 100px;
+          
+        }
+    </style>
+</head>
+<body>
+    <!--  bx#s$*3{s$} 
+    에밋코딩을 여러개 만들 경우 * 기호 사용 
+    자동넘버링은 $ 기호 사용 {}사이에 들어가는 건 content-->
+    
+    <div class="bx" id="s1">s1</div>
+    <div class="bx" id="s2">s2</div>
+    <div class="bx" id="s3">s3</div>
+</body>
+</html>
