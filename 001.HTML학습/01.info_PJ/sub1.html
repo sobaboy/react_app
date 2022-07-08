@@ -1,52 +1,188 @@
-<!doctype html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-        <head>
-            <title>네이버 요약뉴스 - 정치</title>
-            <meta charset="utf-8">
-            <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
-        
-            <link rel="stylesheet" href="./css/sub.css">
+<head>
+    <title>네이버 요약뉴스 - 정치</title>
+    <!-- title : 브라우저 탭메뉴 타이틀 -->
+    <meta charset="utf-8">
+    <!-- meta태그 초기정보 셋업 : 
+            charset 문자인코딩형식 지정 -->
+    <!-- 외부스타일시트 불러오기 :  익스터널방식 -->
+    <link rel="stylesheet" href="./css/sub.css">
+</head>
 
-        </head>
+<body>
+    <!-- 1. 상단영역 -->
+    <header id="top" class="bxc">
+        <!-- 1-1. 타이틀 -->
+        <h1>네이버 요약뉴스 - 정치</h1>
+        <!-- 1-2. 메뉴(GNB: Global Navigation Bar) -->
+        <nav class="nav">
+            <a href="index.html">
+                <img src="./images/logo.png" alt="네이버로고" style="width: 20px;">
+                <!-- 
+                        style 속성
+                        (인라인방식)
+                        - 어느요소나 사용가능
+                        - css를 각 요소에 직접
+                        코딩하는 방식
+                        - JS에서 이방식을 사용!
+                        - 우선순위 가장높음!
+                     -->
+            </a>
+            <!-- 
+                    img 요소 : image
+                    - 이미지를 경로에서 불러와서
+                    화면에 보여주는 요소
+                    (필수속성 2가지!)
+                    -> src : source
+                        이미지 경로 속성
+                    -> alt : alternative text
+                        대체 텍스트
+                        (웹접근성 필수!)
 
-        <body>
-            <header id="top" class="bxc">
-                <h1>네이버 요약뉴스 - 정치</h1>
-                <nav class="nav">
-                    <a href="index.html">
-                        <img src="./Images/네이버 로고.png" alt="네이버로고" style="width: 20px;">
+                    [ 경로에 관하여... ]
+                    1) 상대경로
+                        -> 현재 파일 위치로 경로를 잡음
+                        ./ 현재위치로부터
+                        (안써도 현재위치로부터임)
+                        ../ 한단계 위로
+                        ../../../ 계속 위로...
+                    2) 절대경로
+                        -> http://... 이런식의
+                        웹주소가 절대경로임!
+                    3) 절대상대경로
+                        프로젝트 파일 최상위부터 잡는 경로
+                        / 루트부터출발
+                        예) /aaa/bbb 
+                 -->
+            <a href="sub1.html">정치</a> |
+            <a href="sub2.html">경제</a> |
+            <a href="sub3.html">사회</a> |
+            <a href="sub4.html">IT/과학</a> |
+            <a href="sub5.html">TV/연예</a>
+        </nav>
+    </header>
+    <!-- 
+            div : divide / division
+            -> 영역을 구분하는 블록요소
+            블록요소는 옆에 다른요소가 못오며
+            내용을 구분하는 역할을 함!
+
+            [요소에 이름넣기!]
+            - 요소를 구분하기 위한 아이디/클래스로 이름짓는다
+            - 아이디(id) : 유일한 요소구분
+            - 클래스(class) : 공통디자인 요소구분
+         -->
+    <!-- 2. 메인영역 -->
+    <main id="cont" class="bxc">
+        <!-- 2-1. 언론사로고 -->
+        <div class="prlogo">
+            <a href="https://www.yna.co.kr/" target="_blank">
+                <img src="./images/pr1.png" alt="연합뉴스로고">
+            </a>
+        </div>
+        <!-- 2-2. 기사제목 -->
+        <h2 class="atit">
+            '181표차 패배' 제종길 안산시장 후보, 선관위에 재검표 요청
+        </h2>
+        <!-- 2-3. 기사사진(+사진설명) -->
+        <figure class="afig">
+            <img src="./images/arti1.jpg" alt="정치기사이미지" />
+            <!-- 이미지설명 -->
+            <figcaption>
+                <small>투표용지 검수는 꼼꼼히
+                    (수원=연합뉴스) 홍기원 기자 = 제8회 전국동시지방선거를 9일 앞둔 23일 오전 경기도 수원시 영통구 경기도선거관리위원회에서 관계자들이 투표용지를 검수하고 있다. 2022.5.23 [공동취재] xanadu@yna.co.kr
+                    </small>
+            </figcaption>
+            <!-- 이미지설명 하단에 다른 태그 못씀! -->
+        </figure>
+        <!-- 2-4. 기사내용 -->
+        <section class="arti">
+            <p>제 후보 측은 27일 보도자료를 통해 "지난 1일 개표과정에서 검표기 개표에서는 제 후보가 이겼는데, 잠정무효표를 수기로 검표한 뒤 이 후보가 181표로 역전한 결과가 나왔다"며 "이는
+                이해하기 어려운 특이한 결과"라고 주장했다.</p>
+
+            <p>이어 "이에 따라 경기도선관위에 재검표를 소청했고 이달 말에 경기도선관위가 심의할 예정"이라고 덧붙였다.</p>
+
+            <p>지난 1일 선거 개표 결과 안산지역 총투표수 26만586표 가운데 이 후보가 11만9천776표를 얻어 11만9천595표 득표에 그친 제 후보를 181표 차로 이겼다. 경기도 31명의
+                기초단체장 선거 중 최소 표차였다.</p>
+
+            <p>제 후보 측은 개표기를 통한 개표에서는 제 후보가 11만7천289표로 11만6천865표의 이 후보를 424표 차이로 이겼다고 주장하고 있다. 득표율로는 제 후보가 이 후보를 0.2%포인트
+                앞선 수치다.</p>
+
+            <p>그러나 재확인이 필요한 잠정무효표(8천742표)를 수작업으로 검표한 뒤에는 오히려 이 후보가 181표 역전한 결과가 나왔다.</p>
+
+            <p>잠정무효표 중 3천123표가 최종 무효표로 집계됐는데, 이를 빼고 유효표로 결정된 5천619표 중에서 이 후보가 605표(424표+181표), 득표율로는 10.8%포인트 앞섰다는 것이다.
+            </p>
+        </section>
+        <!-- 2-5. 기자정보 -->
+        <div class="rinfo">김인유(hedgehog@yna.co.kr)</div>
+
+        <!-- 2-6. 기사원문 -->
+        <h5>
+            <a href="https://n.news.naver.com/mnews/article/001/0013274347?sid=100" target="_blank">기사원문</a>
+        </h5>
+
+        <!-- 랭킹뉴스 -->
+        <article class="rank">
+            <h3>랭킹뉴스</h3>
+            <ol>
+                <li>
+                    <a href="https://n.news.naver.com/mnews/ranking/article/214/0001205219?ntype=RANKING&sid=001"
+                        target="_blank">
+                        "푸틴, 돈바스 점령속도 불만에 야전 총사령관 경질"
                     </a>
-                    <a href="sub1.html">정치</a> |
-                    <a href="sub2.html">경제</a> |
-                    <a href="sub3.html">사회</a> |
-                    <a href="sub4.html">IT/과학</a> |
-                    <a href="sub5.html">TV/연예</a>
-                   
-                </nav>
-            </header>
-            <main>
-                
-                    <main id="cont" class="bxc"></main>
-                    <!-- 2-1. press 'logo' -->
-                   <div class="prloge"></div>
-                    <!-- 2-2. article 'title' -->
-                   <div class="atit"></div>
-                   <!-- 2-3. article 'image + explanation'  -->
-                   <figure class="afig"></figure>  
-                   <!-- 2-4. arrticle 'content' -->
-                   <setion class="acont"></setion>
-                   <!-- 2-5. reporter 'info' -->                
-                   <div class="rpinfo"></div>                
-            </main>
-            <footer id="info" class="bxc">
-                    <address>
-                                서울시 강남구 역삼동 119 대호B 8F <br>
-                                대표: Sobaboi <br>
-                                전화: 010-xxxx-xxxx
-                    </address>
-            </footer>
-        </body>
+                </li>
+                <li>
+                    <a href="https://n.news.naver.com/mnews/ranking/article/437/0000303442?ntype=RANKING&sid=001"
+                        target="_blank">
+                        [영상] 순식간에 앞으로 쏟아졌다…콜롬비아서 투우 경기장 …
+                    </a>
+                </li>
+                <li>
+                    <a href="https://n.news.naver.com/mnews/ranking/article/009/0004983193?ntype=RANKING&sid=001"
+                        target="_blank">
+                        축 늘어진 아이, 차례로 꺼진 휴대폰…완도 실종 가족 CC …
+                    </a>
+                </li>
+            </ol>
+        </article>
+    </main>
+    <!-- 3. 하단영역 -->
+    <footer id="info" class="bxc">
+        <!-- 회사주소 및 정보 -->
+        <address>
+            서울시 강남구 역삼동 119 대호B 8F <br>
+            대표: Tom Brace Parker <br>
+            전화: 010-2222-3333
+        </address>
+    </footer>
 
-             
-    </html>
+
+
+    <!-- 
+            [ div 형제 요소들 ]
+
+            -> div에 어떤 내용영역인지 알 수 있도록
+            의미를 부여한 새로운 레이아웃용 태그들!
+            -> 태그에 의미를 부여함! 
+            -> 시멘틱태그!(sementic tag)
+
+            1. header - 상단영역
+            2. footer - 하단영역
+            3. main - 메인영역(한페이지에 한번만!)
+            4. nav - 네비게이션 영역
+            5. aside - 부수적인 내용 영역
+            4. section - 내용구분을 위한 영역
+            5. article - 독립적인 내용을 구분하는 영역
+                (보통 article 이나 section은 
+                w3c에서 heading 태그(h1~h6)를 내용에
+                사용할 것을 권고함! - 안써도 무관! )
+
+
+         -->
+
+
+</body>
+
+</html>

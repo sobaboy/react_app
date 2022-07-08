@@ -1,174 +1,208 @@
 @charset "utf-8";
-/* Info PJ 의 subpage 공통 css - sub.css */
+/* Info PJ 서브페이지 공통 CSS - sub.css */
 
-/* @import url (파일주소) */
-@import url(comman.css);
+/* 공통 클래스 불러오기 */
+/* 
+    import 로 파일 합치기
+    외부 CSS파일에서 다른 외부CSS를 
+    import방식으로 불러올때의 장점은?
+    html파일에서 link요소로 호출할 경우
+    http request(웹요청)이 많아져서
+    페이지 랜더링 솓고가 더뎌진다!
+    따라서 이 방식을 쓰면 한번에 여러 CSS를
+    불러올 수 있어서 속도에 유리하다!
+*/
+/* @import url(파일주소); */
+@import url(common.css);
 
 /* 메인영역박스 */
 #cont{
     padding: 15px;
 }
 
-/* 2-1. press logo  */
+/* 2-1. 언론사 로고 */
 .prlogo img{
-    height: 30px;
-
+    height: 32px;/* h32 */
+    /* 이미지는 가로나 세로중 하나만
+    변경하면 나머지는 자동으로 비율유지함! */
 }
+/* 기사제목 */
+.atit{
+    /* 글자크기 */
+    font-size: 30px;
+    /* 글자두께:보통 */
+    font-weight: normal;
+    /* 글자체: 순서대로 적용 */
+    font-family: "굴림","궁서",sans-serif;
+    /* 자간: 0기준으로 조정 */
+    letter-spacing: -2px;
+    /* 단어간격: 0기준조정 */
+    word-spacing: -1px;
 
-.work img{
-    width: 500px;
-
+    /* 줄바꿈방지: 보통 박스는 자동으로 줄바꿈 처리하여 글자가 떨어지는데 nowrap으로 설정하면 글자가 줄바꿈안되고 밖으로 나감 */
+    /* white-space: nowrap; */
 }
-
-
-#header {
-    display: flex;
-    height: 100vh;
-
-}
-
-
-.ul {
-    list-style-type: none;
-
-}
-
-.ol {
-    list-style-type: lower-greek;
-}
-
-.atit {
-    font-size: 30;          
-    font-weight: normal;          
-    font-family: "굴림";
-    letter-spacing: -1px;
-    word-spacing: 5px;
-    
-}
-
+/* 제목 중 특정 글자만 변경 */
 .atit span{
-    color: lightgreen;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.483);
+    /* 글자색 */
+    color: rgb(33, 152, 33);
+    /* 글자그림자 */
+    /* text-shadow: x축 y축 블러 색; */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.595);
 }
-
 /* 기사이미지박스 */
-
 .afig{
+    /* 마진: 위아래 양쪽 */
     margin: 15px 0;
 }
-
+/* 기사이미지 */
 .afig img{
-    width: 100%;             /* w100p */  /* 가로크기 부모박스 채우기 */
+    /* 가로크기: 부모박스 채움 */
+    width: 100%;
 }
-
+/* 기사이미지 설명박스 */
 .afig figcaption{
-    text-align: center;     /* text-align 은 block element 에만 적용가능    */
-    margin-bottom: 50px;            /* 브라우저에서 봤을 때 pedding 은 초록색 margin 은 빨강색으로 표시된다 */
-}
+    /* 글자정렬: 중앙 */
+    text-align: center;
+    /* 유의사항 - 글자정렬은
+    블록박스에서 적용해야 내부의
+    인라인요소의 정렬이 변경됨!
+    (인라인에서 적용하면 안됨!) */
 
+    /* 마진하단 */
+    margin-bottom: 50px;
+}
+/* 기사이미지 설명글 small */
 .afig small{
-    font-family: "굴림";
-    columns: #666;
+    /* 글씨체 */
+    font-family: gulim;
+    /* 글자색 */
+    color: #666;
 }
 
 /* 기사내용박스 */
-.acont p{
-    font-family: "굴림", sans-serif;
+.arti p{
+    /* 글씨체 */
+    font-family: "굴림",sans-serif;
+    /* 글자크기 */
     font-size: 17px;
+    /* 줄간격: 숫자만쓰면 배수 */
     line-height: 1.6;
-}
+    /* 패딩양쪽 */
+    padding: 0 10px;
 
+}
+/* 기타 타이틀 h3 */
 #cont h3{
-    font-family: 'black And white Picture';
+    /* 글자체: 웹폰트적용 */
+    font-family: 'Black And White Picture', sans-serif;
+    /* 글자두께: 얇은체 */
     font-weight: normal;
-    font-size: 20px;
-    /* padding-left: 20px;         */
+    /* 글자크기 */
+    font-size: 25px;
+    /* 패딩왼쪽 */
+    /* padding-left: 20px; */
 }
 
 /* 공통박스 */
-
 #cont article {
     border-top: 2px dashed #ccc;
     margin-top: 40px;
     padding: 15px;
 }
 
-.acont p {
-    font-family: "굴림", sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    padding: 10px;
-}
-
-/* 블록인용구박스 */
-
-.bquote blockquote{
+/* 블록인용구 박스 */
+.bquote blockquote {
     margin: 0;
     padding: 5px;
-    font-family: "굴림";
+    /* 글자정렬: 양쪽정렬 */
     text-align: justify;
-    line-height: 1.4;
+    font-family: gulim;
     font-size: 14px;
-    letter-spacing: 2px;
+    line-height: 1.8;
 }
 
-
-/* 메인 컨텐츠 아래 a 요소 
-주의사항 - 글자색, 밑줄은 반드시 a 요소에서 할 것! */
-
+/* 메인 컨텐츠 아래 a요소
+주의사항 - 글자색, 밑줄은 반드시 a요소에서 할것! */
 #cont a{
+    /* 글자색 */
     color: #222;
+    /* 글자데코: 밑줄없앰 */
     text-decoration: none;
-    font-family: "돋움","궁서";
+    /* 글자크기 */
     font-size: 14px;
+    /* 글자체 */
+    font-family: "돋움","궁서";
+    /* 줄간격 */
     line-height: 2.5;
-    letter-spacing: -1;
+    /* 자간 */
+    letter-spacing: -1px;
 }
-
-/* a element 마우스 오버시 : hover 가상클래스 */
-/* 글자데코 : 밑줄 */
+/* a요소 마우스 오버시
+:hover 가상클래스 */
 #cont a:hover{
+    /* 글자데코:밑줄 */
     text-decoration: underline;
+    /* 글자색 */
     color: orangered;
 }
-
-/* ul 블릿 타입변경 */
+/* ul,ol 블릿타입변경 */
 #cont ul{
-    list-style-type: none;
+    list-style-type: square;
 }
-
 #cont ol{
-    list-style-type: circle;
+    list-style-type: upper-roman;
 }
-
 
 /* 분야별 뉴스 dt */
-.secnews dt{
-font-family: 'black And white Picture';
-margin-top: 27px;
-padding-left: 33px;
-font-size: 22px;
+.secnews dt {
+    font-family: 'Black And White Picture', sans-serif;
+    margin-top: 27px;
+    padding-left: 11px;
+    font-size: 22px;    
 }
+/* dt순서별 글자색변경 */
+.secnews dt:first-of-type {
+    color: lightsalmon;
+}
+.secnews dt:nth-of-type(2) {
+    color: green;
+}
+.secnews dt:last-of-type {
+    color: hotpink;
+}
+/* 
+    [ 자식요소 순번선택하기 ]
+    -> 태그가 여러종류 섞인경우
 
-.secnews dt:first-of-type{
-    color: lightsalmon
-}
-.secnews dt:nth-of-type(2){
-    color: lightsalmon
-}
-.secnews dt:last-of-type{
-    color: lightsalmon
-}
-.secnews dt:last-of-type{
-    color: hotpink
-}
+    :first-of-type 
+    같은종류중 첫번째요소
+    :nth-of-type(n)
+    같은종류중 n번째요소
+    :last-of-type
+    같은종류중 마지막째요소
+    _____________________
 
+    -> 태그종류가 한가지일때
+    :first-child 
+    형제요소 중 첫번째요소
+    :nth-child(n)
+    형제요소 중 n번째요소
+    :last-child
+    형제요소 중 마지막째요소
+*/
+
+/* 오늘의 작품&느낌 박스 */
 article.work {
     text-align: center;
     background-color: lightgoldenrodyellow;
 }
-
-
+/* 작품설명박스 */
+.work figcaption {
+    padding-top: 12px;
+    font-size: 14px;
+}
+/* 작품명 */
 .work cite {
     color: red;
     font-family: "궁서";
@@ -176,32 +210,46 @@ article.work {
     font-weight: bold;
 }
 
+/* 사진뉴스 박스 */
+.pnews table{
+    /* 마진: 양쪽 auto 가로중앙정렬 */
+    margin: 0 auto;
+    /* 블록요소와 같이 table도 마영오! 적용 */
+}
+/* 첫번째 td - 숫자td */
 .pnews td:first-child {
     width: 50px;
     height: 70px;
     background-color: #ccc;
     text-align: center;
 }
-/* 두번째 td */
+/* 두번째 td - 뉴스제목링크 */
 .pnews td:nth-child(2) {
     background: #f0f0f0;
     padding-right: 116px;
     padding-left: 20px;
 }
-/* 사진뉴스 테이블설정 */
+/* 사진뉴스 이미지 */
 .pnews img {
     width: 151px;
     height: 103px;
     vertical-align: middle;
 }
-/* 기본 사이간극: collapse 주면 간극 없앰 (seperate 기본값) */  
+/* 사진뉴스 테이블 설정 */
 .pnews table {
+    /* 기본 사이간극: 
+    collapse 주면 간극없앰(seperate기본값) */
     border-collapse: separate;
+    /* 사이간격 설정: 
+    주의-seperate상태에서만 설정됨! */
     border-spacing: 7px;
 }
 
-#cont h5 a, .rpinfo {
+/* 기자정보,기사원문 박스 */
+#cont h5 a, .rinfo {
     padding-left: 18px;
     font-size: 14px;
     font-weight: normal;
 }
+
+
